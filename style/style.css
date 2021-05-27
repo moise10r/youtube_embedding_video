@@ -147,7 +147,7 @@ header {
   width:3.2rem !important;
   height: 3.2rem !important;
   background-color: red;
-  margin-right: 2.2rem;
+  margin-right: 4rem;
 }
 
 .auth .profile img{
@@ -155,58 +155,73 @@ header {
   object-fit: cover;
   border-radius: 50%;
 }
-
-/* main content */
-
-main {
-  margin: 0 2.4rem 3rem 0;
-}
-
-.content {
-  display: grid;
-  grid-template: auto 1fr / 2fr 1fr;
-  padding: 8rem;
-}
-
-@media only screen and (max-width: 1200px) {
-  .content {
-    padding: 8rem 1rem 1rem 1rem;
-  }
-}
-
-@media only screen and (max-width: 1020px) {
-  main {
-    margin: 0 2rem 3rem 2rem;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-.video-container {
-  border-bottom: 1px solid rgba(156, 92, 92, 0.2);
-}
 .options-btn{
-  position: relative;
-}
-.options-btn svg{
-  fill:var(--primaryColor)
-}
-.options-btn span{
-  display: block;
-  position: absolute;
-  top: 5px;
-  right: -7px;
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  line-height: 18px;
-  background-color: #cc0000;
-}
+    position: relative;
+  }
+  .options-btn svg{
+    fill:var(--primaryColor)
+  }
+  .options-btn span{
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -7px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    background-color: #cc0000;
+  }
 
-.player {
+
+  main {
+    margin: 0 2.4rem 3rem 0;
+  }
+  
+  .content {
+    display: grid;
+    grid-template: auto 1fr / 2fr 1fr;
+    padding: 8rem;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .content {
+      padding: 8rem 1rem 1rem 1rem;
+    }
+  }
+  
+  @media only screen and (max-width: 1020px) {
+    main {
+      margin: 0 2rem 3rem 2rem;
+    }
+  
+    .content {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .video-container {
+    border-bottom: 1px solid rgba(156, 92, 92, 0.2);
+  }
+  .options-btn{
+    position: relative;
+  }
+  .options-btn svg{
+    fill:var(--primaryColor)
+  }
+  .options-btn span{
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -7px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    background-color: #cc0000;
+  }
+  .player {
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 25px;
@@ -297,8 +312,12 @@ main {
     height: 24px;
   }
   
-
-.channel-info {
+  
+  /* description */
+  
+  /* channel-info */
+  
+  .channel-info {
     display: flex;
     align-items: center;
     padding-top: 1.5rem;
@@ -416,5 +435,167 @@ main {
     font-size: 1.3rem;
     font-weight: 500;
     color: #aaa;
+  }
+  
+  /* aside */
+  
+  aside {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  
+  /* up-next */
+  
+  .up-next {
+    margin-bottom: 0.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+  }
+  
+  .autoplay {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    padding-bottom: 0.5rem;
+  }
+  
+  .autoplay a {
+    padding: 1rem 1rem;
+    margin-right: 3rem;
+    border-radius: 15px;
+    font-size: 15px;
+    background-color: #393939;
+    align-items: center;
+    text-decoration: none;
+  }
+  .autoplay a:first-child{
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+  }
+  
+  
+  
+  
+  /* thumbnail */
+  
+  .thumbnail {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding-top: 1rem;
+    text-decoration: none;
+  }
+  
+  .duration {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: -2.7rem;
+    text-align: right;
+  }
+  
+  .duration span {
+    padding: 0.1rem 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 2px;
+    background-color: #000;
+  }
+  
+  .thumbnail-img {
+    position: relative;
+  }
+  
+  .thumbnail-img img {
+    height: 96px;
+  }
+  
+  .thumbnail-info {
+    padding: 0 1rem;
+  }
+  
+  .thumbnail-title {
+    width: 202px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin: 0 1rem 0.5rem 0;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .thumbnail-title {
+      width: auto;
+    }
+  }
+  
+  .thumbnail-channel-name {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #aaa;
+  }
+  
+  .thumbnail-channel-name > img {
+    margin-left: 0.5rem;
+    width: 14px;
+  }
+  
+  .thumbnail-video-info {
+    padding-top: 0.2rem;
+    padding-bottom: 0.3rem;
+    font-size: 1.3rem;
+    color: #aaa;
+  }
+  
+  .thumbnail-new {
+    padding: 0.1rem 0.5rem;
+    background-color: rgb(51, 51, 51);
+    border-radius: 2px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #aaa;
+  }
+  
+  .thumbnail-img-overlay {
+    visibility: hidden;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    top: 0;
+  }
+  
+  .thumbnail-img-overlay .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0.4rem 0.4rem 0 0;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  .thumbnail-img-overlay img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .thumbnail-overlay {
+    visibility: hidden;
+    position: absolute;
+    right: 0;
+  }
+  
+  .thumbnail-overlay .btn {
+    margin-right: -1rem;
+  }
+  
+  .thumbnail:hover .thumbnail-img-overlay,
+  .thumbnail:hover .thumbnail-overlay {
+    visibility: initial;
   }
   
